@@ -1,10 +1,11 @@
-package modelo.entidades;
+package tabuleiro;
 
 public class Posicao {
 	private int linha;
 	private int coluna;
-	
-	public Posicao() {}
+
+	public Posicao() {
+	}
 
 	public Posicao(int linha, int coluna) {
 		this.linha = linha;
@@ -18,10 +19,10 @@ public class Posicao {
 	public int getColuna() {
 		return coluna;
 	}
-	
+
 	public void setValues(int linha, int coluna) {
 		this.linha = linha;
 		this.coluna = coluna;
 	}
-	
+
 }
