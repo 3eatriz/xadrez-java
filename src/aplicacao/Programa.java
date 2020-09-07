@@ -1,10 +1,14 @@
 package aplicacao;
 
+import xadrez.PartidaDeXadrez;
+
 public class Programa {
-
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		PartidaDeXadrez partidaXadrez = new PartidaDeXadrez();
+		IU.imprimirTabuleiro(partidaXadrez.getPecas());
+		
 	}
 
 }
