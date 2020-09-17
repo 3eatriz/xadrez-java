@@ -25,6 +25,9 @@ public class Programa {
 				System.out.print("Escolha a peça: ");
 				PosicaoXadrez pInicial = IU.lerPosicaoXadrez(leia);
 				
+				boolean[][] possiveisMovimentos = partidaXadrez.possiveisMovimentos(pInicial);
+				IU.limparTela();
+				IU.imprimirTabuleiro(partidaXadrez.getPecas(), possiveisMovimentos);
 				System.out.println();
 				System.out.print("Mover para: ");
 				PosicaoXadrez pFinal = IU.lerPosicaoXadrez(leia);

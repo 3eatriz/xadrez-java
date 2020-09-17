@@ -17,7 +17,7 @@ public class Torre extends PecaDeXadrez{
 	}
 	
 	@Override
-	protected boolean[][] possiveisMovimentos() {
+	public boolean[][] possiveisMovimentos() {
 		boolean[][] mat = new boolean[getTabuleiro().getLinhas()][getTabuleiro().getColunas()];
 		
 		Posicao p = new Posicao(0, 0);
@@ -46,7 +46,7 @@ public class Torre extends PecaDeXadrez{
 		p.setValues(posicao.getLinha(), posicao.getColuna() - 1);
 		while(getTabuleiro().posicaoExiste(p) && !getTabuleiro().haUmaPeca(p)) {
 			mat[p.getLinha()][p.getColuna()] = true;
-			p.setLinha(p.getColuna() - 1);
+			p.setColuna(p.getColuna() - 1);
 		}
 		if(getTabuleiro().posicaoExiste(p) && temUmaPecaDoOponente(p)) {
 			mat[p.getLinha()][p.getColuna()] = true;
@@ -56,7 +56,7 @@ public class Torre extends PecaDeXadrez{
 		p.setValues(posicao.getLinha(), posicao.getColuna() + 1);
 		while(getTabuleiro().posicaoExiste(p) && !getTabuleiro().haUmaPeca(p)) {
 			mat[p.getLinha()][p.getColuna()] = true;
-			p.setLinha(p.getColuna() + 1);
+			p.setColuna(p.getColuna() + 1);
 		}
 		if(getTabuleiro().posicaoExiste(p) && temUmaPecaDoOponente(p)) {
 			mat[p.getLinha()][p.getColuna()] = true;
