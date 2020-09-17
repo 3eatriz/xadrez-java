@@ -18,11 +18,11 @@ public class Programa {
 		while (true) {
 			try {
 				IU.limparTela();
-				IU.imprimirTabuleiro(partidaXadrez.getPecas());
+				IU.imprimirPartida(partidaXadrez);
 				System.out.println();
 				System.out.println();
-				System.out.println("Mova a sua peça.");
-				System.out.print("Escolha a peça: ");
+				System.out.println("Mova a sua peca.");
+				System.out.print("Escolha a peca: ");
 				PosicaoXadrez pInicial = IU.lerPosicaoXadrez(leia);
 				
 				boolean[][] possiveisMovimentos = partidaXadrez.possiveisMovimentos(pInicial);
